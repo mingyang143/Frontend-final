@@ -1,0 +1,49 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.user-details {
+  flex: 1;
+}
+
+.user-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.user-email {
+  font-size: 16px;
+  color: #888;
+}
+
+.user-bio {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.user-skills {
+  margin-top: 20px;
+}
+
+.skill {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 12px;
+}
