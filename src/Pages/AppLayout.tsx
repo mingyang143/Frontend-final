@@ -1,12 +1,6 @@
-import Button from "../Components/Button";
-import Spinner from "../Components/Spinner";
-import { useAuth } from "../Contexts/Hooks/AuthContextHook";
-import Game from "../Components/Game";
-import { lazy } from "react";
-
 function AppLayout() {
   //const { isPostFormOpen, dispatch, isLoading, tagsAll } = usePosts();
-  const { isLoginLoading } = useAuth();
+  //const { isLoginLoading } = useAuth();
   // if (isLoginLoading) {
   //   return <Spinner />;
   // }
