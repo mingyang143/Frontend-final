@@ -71,6 +71,7 @@ function AuthProvider({ children }: ChildrenProps) {
       alert("Successfully created user! Please login.");
       navigate("/login");
     } else {
+      console.log(data);
       alert(data.message);
     }
   }
@@ -86,13 +87,16 @@ function AuthProvider({ children }: ChildrenProps) {
 
   async function dbIsValidUser(user: User) {
     try {
-      const res = await fetch(`http://localhost:3000/api/v1/users/login`, {
-        method: "post",
-        body: JSON.stringify(user),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const res = await fetch(
+        `https://damp-dawn-22073-c78b7e8643df.herokuapp.com/api/v1/users/login`,
+        {
+          method: "post",
+          body: JSON.stringify(user),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       const data = await res.json();
       console.log(data);
@@ -104,13 +108,16 @@ function AuthProvider({ children }: ChildrenProps) {
 
   async function dbPostUser(newUser: User) {
     try {
-      const res = await fetch(`http://localhost:3000/api/v1/users/signup`, {
-        method: "post",
-        body: JSON.stringify(newUser),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const res = await fetch(
+        `https://damp-dawn-22073-c78b7e8643df.herokuapp.com/api/v1/users/signup`,
+        {
+          method: "post",
+          body: JSON.stringify(newUser),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
       const data = await res.json();
       console.log(data);
@@ -123,7 +130,7 @@ function AuthProvider({ children }: ChildrenProps) {
   async function dbForgetPassword(email: string) {
     try {
       const res = await fetch(
-        `http://localhost:3000/api/v1/users/forgotPassword`,
+        `https://damp-dawn-22073-c78b7e8643df.herokuapp.com/api/v1/users/forgotPassword`,
         {
           method: "post",
           body: JSON.stringify({ email }),
