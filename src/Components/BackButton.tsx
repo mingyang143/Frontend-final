@@ -13,6 +13,7 @@ function BackButton() {
       onClick={(e: React.MouseEvent<HTMLElement>) => {
         backNavigate(e);
       }}
+      isButtonDisabled={false}
     >
       &larr; Back
     </Button>

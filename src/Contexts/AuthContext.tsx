@@ -102,7 +102,9 @@ function AuthProvider({ children }: ChildrenProps) {
       console.log(data);
       return data;
     } catch {
-      alert("There was an error validating user...");
+      alert(
+        "There was an error validating user... please try again logging in again."
+      );
     }
   }
 
@@ -123,7 +125,7 @@ function AuthProvider({ children }: ChildrenProps) {
       console.log(data);
       return data;
     } catch (err) {
-      alert("There was an error loading data...");
+      alert("There was an error loading data... please try signing up again.");
     }
   }
 
@@ -144,7 +146,7 @@ function AuthProvider({ children }: ChildrenProps) {
       console.log(data);
       return data;
     } catch (err) {
-      alert("There was an error loading data...");
+      alert("There was an error loading data... please send another email.");
     }
   }
 

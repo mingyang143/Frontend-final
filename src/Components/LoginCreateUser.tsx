@@ -23,6 +23,18 @@ export default function Login({
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
+  var isButtonDisabled = true;
+
+  if (type === "login" && email && password) {
+    isButtonDisabled = false;
+  }
+  if (type === "create" && email && password && name && passwordConfirm) {
+    isButtonDisabled = false;
+  }
+  if (type === "forgotPassword" && email) {
+    isButtonDisabled = false;
+  }
+
   function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
 
@@ -150,7 +162,11 @@ export default function Login({
           </div>
         )}
         <div>
-          <Button className="" onClick={() => {}}>
+          <Button
+            className=""
+            onClick={() => {}}
+            isButtonDisabled={isButtonDisabled}
+          >
             {ctaButton}
           </Button>
         </div>

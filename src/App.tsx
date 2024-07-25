@@ -32,6 +32,7 @@ function App() {
           <Button
             onClick={() => setIsDark((isDark) => !isDark)}
             className="btn-dark-mode"
+            isButtonDisabled={false}
           >
             {" "}
             {isDark ? "☀️" : "🌙"}
