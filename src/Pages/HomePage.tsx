@@ -15,7 +15,7 @@ function HomePage() {
           <br />
           Play Producity now!
         </h1>
-        <h2>Producity helps you to prevent producity</h2>
+        <h2>Producity helps you to reduce procrastination</h2>
         <Link to="/login" className={styles.cta}>
           Start Game!
         </Link>

@@ -1,3 +1,5 @@
+import UnityGame from "../Components/UnityGame";
+
 function AppLayout() {
   //const { isPostFormOpen, dispatch, isLoading, tagsAll } = usePosts();
   //const { isLoginLoading } = useAuth();
@@ -10,6 +12,8 @@ function AppLayout() {
       <section>
         {/* <Game /> */}
         {/* <Game></Game> */}
+
+        <UnityGame />
         {/* {isPostFormOpen && <FormMakePost />}
         {!isPostFormOpen && (
           <Button

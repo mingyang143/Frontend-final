@@ -1,4 +1,4 @@
-export function createUnityInstance(t, n, c) {
+function createUnityInstance(t, n, c) {
   function s(e, t) {
     if (!s.aborted && n.showBanner)
       return "error" == t && (s.aborted = !0), n.showBanner(e, t);
