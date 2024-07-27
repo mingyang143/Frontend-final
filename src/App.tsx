@@ -1,10 +1,10 @@
-import { Suspense, lazy, useEffect, useState } from "react";
+import { Suspense, lazy } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AuthProvider } from "./Contexts/AuthContext";
 import ProtectedRoute from "./Pages/ProtectedRoute";
 
 import Navigation from "./Components/Navigation";
-import Button from "./Components/Button";
+//import Button from "./Components/Button";
 import SpinnerFull from "./Components/SpinnerFull";
 import UserProfile from "./Pages/UserProfile";
 import ForgetPassword from "./Pages/ForgotPassword";
@@ -17,26 +17,26 @@ const CreateUser = lazy(() => import("./Pages/CreateUser"));
 
 function App() {
   //toggle dark mode
-  const [isDark, setIsDark] = useState(false);
-  useEffect(
-    function () {
-      document.documentElement.classList.toggle("dark-mode");
-    },
-    [isDark]
-  );
+  // const [isDark, setIsDark] = useState(false);
+  // useEffect(
+  //   function () {
+  //     document.documentElement.classList.toggle("dark-mode");
+  //   },
+  //   [isDark]
+  // );
   return (
     <BrowserRouter>
       <AuthProvider>
         <header>
           <Navigation />
-          <Button
+          {/* <Button
             onClick={() => setIsDark((isDark) => !isDark)}
             className="btn-dark-mode"
             isButtonDisabled={false}
           >
             {" "}
             {isDark ? "☀️" : "🌙"}
-          </Button>
+          </Button> */}
         </header>
         <Suspense fallback={<SpinnerFull />}>
           <Routes>
