@@ -17,26 +17,26 @@ const CreateUser = lazy(() => import("./Pages/CreateUser"));
 
 function App() {
   //toggle dark mode
-  const [isDark, setIsDark] = useState(false);
-  useEffect(
-    function () {
-      document.documentElement.classList.toggle("dark-mode");
-    },
-    [isDark]
-  );
+  // const [isDark, setIsDark] = useState(false);
+  // useEffect(
+  //   function () {
+  //     document.documentElement.classList.toggle("dark-mode");
+  //   },
+  //   [isDark]
+  // );
   return (
     <BrowserRouter>
       <AuthProvider>
         <header>
           <Navigation />
-          <Button
+          {/* <Button
             onClick={() => setIsDark((isDark) => !isDark)}
             className="btn-dark-mode"
             isButtonDisabled={false}
           >
             {" "}
             {isDark ? "☀️" : "🌙"}
-          </Button>
+          </Button> */}
         </header>
         <Suspense fallback={<SpinnerFull />}>
           <Routes>
