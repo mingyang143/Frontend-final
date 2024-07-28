@@ -104,6 +104,10 @@ export default function UnityGame() {
           cost is written in the building menu.
         </li>
         <li>
+          If any house/road is not placed to your liking, toggle the delete
+          button on the bottom right and click the house/road to be removed
+        </li>
+        <li>
           After spending all your gold, it's time to earn more! To earn more
           gold, you need to complete tasks.
         </li>
