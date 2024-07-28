@@ -136,6 +136,7 @@ export default function UnityGame() {
           an oval shape on the left of the task name. You can click on it to see
           a checkmark which indicates that the task is completed.
         </li>
+        <li>Each completed task will earn you 50 gold.</li>
       </ul>
       <p>Enjoy the game with increased productivity!</p>
     </div>
